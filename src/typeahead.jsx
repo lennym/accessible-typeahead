@@ -343,12 +343,14 @@ export default class Typeahead extends Component {
       const hintValue = (optionBeginsWithQuery && autoselect)
         ? query + selectedOption.substr(query.length)
         : ''
-      return <input
-        className={`${cssNamespace}__hint`}
-        readonly
-        tabindex='-1'
-        value={hintValue}
-      />
+      return hintValue
+        ? <input
+          className={`${cssNamespace}__hint`}
+          readonly
+          tabindex='-1'
+          value={hintValue}
+        />
+        : null
     }
 
     const Input = () => {
