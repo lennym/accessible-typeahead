@@ -53,17 +53,17 @@ export default class Status extends Component {
       }}
     >
       {(cleared)
-        ? <span />
+        ? <p />
         : (queryTooShort)
-          ? <span>Type in {minQueryLength} or more characters for results.</span>
+          ? <p>Type in {minQueryLength} or more characters for results.</p>
           : (noResults)
-            ? <span>No search results.</span>
-            : <span>
+            ? <p>No search results.</p>
+            : <p>
               {length} {words.result} {words.is} available. {(selectedOption)
                 ? <span>{selectedOption} (1 of {length}) is selected.</span>
                 : <span />
               }
-            </span>
+            </p>
       }
     </div>
   }
